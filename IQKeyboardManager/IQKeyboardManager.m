@@ -1905,7 +1905,7 @@ NSInteger const kIQPreviousNextButtonToolbarTag     =   -1005;
         BOOL isAcceptAsFirstResponder = [nextTextField becomeFirstResponder];
         
         //  If it refuses then becoming previous textFieldView as first responder again.    (Bug ID: #96)
-        if (isAcceptAsFirstResponder == NO)
+        if (canCallRetainedItems && isAcceptAsFirstResponder == NO)
         {
             //If next field refuses to become first responder then restoring old textField as first responder.
             [textFieldRetain becomeFirstResponder];
@@ -1942,7 +1942,7 @@ NSInteger const kIQPreviousNextButtonToolbarTag     =   -1005;
         BOOL isAcceptAsFirstResponder = [nextTextField becomeFirstResponder];
         
         //  If it refuses then becoming previous textFieldView as first responder again.    (Bug ID: #96)
-        if (isAcceptAsFirstResponder == NO)
+        if (canCallRetainedItems && isAcceptAsFirstResponder == NO)
         {
             //If next field refuses to become first responder then restoring old textField as first responder.
             [textFieldRetain becomeFirstResponder];
